@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <!-- main -->
+                <div class="container content">
+                    <div class="box">
+                        <div class="b-info">
+                            <p>Name: {{name}}</p>
+                            <p>Subs: {{subs}}</p>
+                            <p>Videos: {{videos}}</p>
+                        </div>
+                        <div class="b b-btns">
+                            <ul>
+                                <li><a href="">Main</a></li>
+                                <li><a href="">Videos</a></li>
+                                <li><a href="">About</a></li>
+                            </ul>
+                        </div>
+                        <div class="b b-vid">
+                            <h1>you dont upload videos yet . . . </h1>
+                        </div>
+                        <%- include('./partials/vid.ejs') %>
+                    </div>
+                    <%- include('./partials/footer.ejs') %>
+
+</div>         
+
+                <%- include('./partials/sidebar.ejs') %>
+    </body>
+</html>

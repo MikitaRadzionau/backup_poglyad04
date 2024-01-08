@@ -1,0 +1,49 @@
+<section class="wrapper">
+    <div class="form signup">
+      <header>Signup</header>
+      <form action="#" onsubmit="myfunc(event)">
+        <input type="text" id="username" placeholder="User Name" required />
+        <input type="text" id="email" placeholder="Email address" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <div class="checkbox">
+          <input type="checkbox" id="signupCheck" />
+          <label for="signupCheck">I accept all terms & conditions</label>
+        </div>
+        <input type="submit" value="Signup"  onsubmit="signFunc()" />
+      </form>
+    </div>
+    <div class="form login">
+      <header>Login</header>
+      <form action="#">
+        <input type="text" placeholder="Email address" required />
+        <input type="password" placeholder="Password" required />
+        <a href="#">Forgot password?</a>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+    <script>
+      const wrapper = document.querySelector(".wrapper"),
+        signupHeader = document.querySelector(".signup header"),
+        loginHeader = document.querySelector(".login header");
+      loginHeader.addEventListener("click", () => {
+        wrapper.classList.add("active");
+      });
+      signupHeader.addEventListener("click", () => {
+        wrapper.classList.remove("active");
+      });
+
+      function myfunc(event){
+        event.preventDefault();
+        count = 0;
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value; 
+
+            localStorage.setItem(`ls_username${count}`, username);
+            localStorage.setItem(`ls_email${count}`, email);
+            localStorage.setItem(`ls_password${count}`, password);
+            count++;
+      }
+    </script>
+  </section>
+

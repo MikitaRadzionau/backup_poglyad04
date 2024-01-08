@@ -1,0 +1,253 @@
+<style>
+        * {box-sizing: border-box;}
+        body,html {
+            position: relative;
+            height: 100%;}
+        .filter-links {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: block;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            background: white;
+            border-bottom: 1px solid #E4D7D7;}
+        .filter-links li {
+            display: inline;
+            float: left;}
+        .filter-links li a {
+            display: block;
+            color: black;
+            padding: 1em 2em;
+            text-decoration: none;}
+
+        .filter-links li a:hover {
+            color: red;
+        }
+
+        .filter-sections {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-column-gap: 1px;
+            grid-row-gap: 0.4px;
+            overflow: hidden;
+
+        }
+
+        .filter-sections div {
+            opacity: 0;
+            display: none;
+            flex-wrap: wrap;
+            min-height: 50px;
+            margin: 0.5em;
+            padding: 2em 1em;
+            float: left;
+            transition: all 500s ease;
+        }
+
+        .view {
+            display: block !important;
+            opacity: 1 !important;
+            transform: scale(1) rotate(0deg);
+            border-radius: 4px;
+            animation: selected 300ms 1 ease-in-out;
+        }
+        .info-vid {
+            display: flex;
+        }
+
+        @keyframes selected {
+            0% {
+                border-radius: 100%;
+                transform: scale(0) rotate(-180deg);
+            }
+        }
+        @media (max-width: 1067px) {
+            .box {
+                display: block;
+            }
+        }
+        /* vid */
+        #preImg {
+            width: 350px;
+            height: 200px;
+        }
+    </style>
+        <ul class="filter-links">
+            <li>
+                <a class="a-tag-filter" href="">All</a>
+            </li>
+            <li>
+                <a class="a-tag-filter" href="">kuplinov</a>
+            </li>
+            <li>
+                <a class="a-tag-filter" href="">dream</a>
+            </li>
+            <li>
+                <a class="a-tag-filter" href="">dorrian</a>
+            </li>
+            <li>
+                <a class="a-tag-filter" href="">marmok</a>
+            </li>
+            <li>
+                <a class="a-tag-filter" href="">mrbeast</a>
+            </li>
+            <li>
+                <a class="a-tag-filter" href="">pewdiepie</a>
+            </li>
+        </ul>
+
+        <div class="filter-sections">
+            <div class="box kuplinov ">
+                <a href="/play-video"><img id="preImg" src="https://i.ytimg.com/vi/dyej_gHWtmo/maxresdefault.jpg" alt="няма куплинова" class="video"></a>
+                <p>Kuplinov ► Play</p>
+            </div>
+            <div class="box dream">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/cIY95KCnnNk/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                <p>Dream</p>
+            </div>
+            
+            <div class="box marmok">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/IEZ_OMrAWl8/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                <p>Marmok</p>
+            </div>
+            <div class="box dorrian">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/9Qo_TZIP9J0/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                    <p>DorrianKarnett</p>
+            </div>
+            <div class="box pewdiepie">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/HNChn7eK1tM/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                    <p>PewDiePie</p>
+            </div>
+            <div class="box marmok">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/8v4Ryf6ZYAI/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                <p>Marmok</p>
+            </div>
+            <div class="box kuplinov ">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/K9Dz8tFBuHY/maxresdefault.jpg"
+                    alt="няма куплинова"
+                    class="video"></a>
+                <p>Kuplinov ► Play</p>
+            </div>
+            <div class="box dream">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/uvebNBKOSTg/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                <p>Dream</p>
+            </div>
+            <div class="box pewdiepie">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/diT6jc9flkc/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                    <p>PewDiePie</p>
+            </div>
+            <div class="box mrbeast">
+                <a href="/play-video"><img
+                    id="preImg"
+                    src="https://i.ytimg.com/vi/TJ2ifmkGGus/maxresdefault.jpg"
+                    alt="няма картинки"
+                    class="video"></a>
+                    <p>MrBeast</p>
+            </div>
+        </div>
+        <script>
+            /*  Javascript filter
+---------------------------------*/
+            // animate divs on start
+            var items = document.querySelectorAll('.filter-sections div');
+            animate(items);
+
+            // filter on click
+            each('.filter-links li a', function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    filterLinks(el);
+                });
+            });
+
+            // filter links functions
+            function filterLinks(element) {
+                // get text
+                var el = element.textContent,
+                    // convert to lowercase
+                    linksTolowerCase = el.toLowerCase();
+                // if all remove all elements
+                if (el === 'All') {
+                    // first show all view class
+                    each('.view', function (e) {
+                        e
+                            .classList
+                            .remove('view');
+                    });
+                    // no show init animation
+                    animate(items);
+                } else {
+                    // if not click all remove all elements
+                    each('.view', function (e) {
+                        e
+                            .classList
+                            .remove('view');
+                    });
+                }
+                // show animation for current elements
+                animate(document.querySelectorAll('.' + linksTolowerCase));
+            };
+            // forech arrays
+            function each(el, callback) {
+                var allDivs = document.querySelectorAll(el),
+                    alltoArr = Array
+                        .prototype
+                        .slice
+                        .call(allDivs);
+                Array
+                    .prototype
+                    .forEach
+                    .call(alltoArr, function (selector, index) {
+                        if (callback) 
+                            return callback(selector);
+                        }
+                    );
+            };
+            // animate function
+            function animate(item) {
+                (function show(counter) {
+                    setTimeout(function () {
+                        item[counter]
+                            .classList
+                            .add('view');
+                        counter++;
+                        if (counter < item.length) 
+                            show(counter);
+                        }
+                    , 50);
+                })(0);
+            };
+        </script>

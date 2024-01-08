@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/all.css">
+<div class="sidebar">
+    <div class="shortcut-links">
+        <a href="/home"><img src="https://cdn-icons-png.flaticon.com/256/69/69524.png" alt=""><p>Home</p></a>
+        <a href="/lib"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFa1-EK5eOLaZSpETfLo2-Um4UmXINXYPZFA&usqp=CAU" alt=""><p>Library</p></a>
+        <a href="/plists"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk9qZHsEp-b-TwrbXQNtqQ-sJwRA7h7edzplBkgM_jfq6CWRu_PGR9ln_291G65OVTs9k&usqp=CAU" alt=""><p>Playlists</p></a>
+        <a href="/subs"><img src="https://cdn.icon-icons.com/icons2/3237/PNG/512/menu_youtube_social_media_subs_subscription_icon_197393.png" alt=""><p>Subscriprion</p></a>
+        <hr>
+    </div>
+    <div class="subscribed-list filter-links">
+        <h3>Подписки</h3>
+        <a href="/watch?c=kuplinov"><img src="https://sun9-76.userapi.com/s/v1/ig2/_cX7aVGF3TKD_2fakjY4s5xBe3MnLzdeVBpJ02M3G6koNjo0L_xP7Xpw8-N9iAAq4yhVPZzP0hJOYzaB2ywuDnlw.jpg?size=200x200&quality=95&crop=74,44,770,770&ava=1" alt="nope"><p>Kuplinov ► Play</p></a>
+        <a href="/watch?c=marmok"><img src="https://avatars.cloudflare.steamstatic.com/024b107576df43ff479253250785d3684ca83f23_full.jpg" alt="nope"><p>Marmok</p></a>
+        <a href="/watch?c=mrbeast"><img src="https://podcastaddict.com/cache/artwork/thumb/3014508" alt="nope"><p>MrBeast</p></a>
+        <a href="/watch?c=dream"><img src="https://pbs.twimg.com/media/E-AL82QXMAEv3Gq.png" alt="nope"><p>Dream</p></a>
+        <a href="/watch?c=pewdiepie"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4QnJcUCmpHs_Qn9ux_1qpcRb1RHUukHjBg&usqp=CAU" alt="nope"><p>PewDiePie</p></a>
+        <a href="/watch?c=dorriankarnett™"><img src="https://avatars.dzeninfra.ru/get-zen-logos/1540393/pub_60c56bcb36dc8f53e136109c_60c56bcb36dc8f53e136109d/xxh" alt="nope"><p>DorrianKarnett™</p></a>
+    </div>
+</div>
+<script>
+let menuIcon = document.querySelector(".menu-icon");
+let sidebar = document.querySelector(".sidebar");
+let container = document.querySelector(".container");
+let button = document.querySelector(".btn");
+
+menuIcon.onclick = function(){
+    sidebar.classList.toggle("small-sidebar");
+    container.classList.toggle("huge-container")
+}
+</script>

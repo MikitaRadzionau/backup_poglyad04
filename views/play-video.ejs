@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="container content cont">
+        <div class="play-video">
+            <video controls="controls" autplay="autplay">
+                <video src="https://www.youtube.com/watch?v=9RhWXPcKBI8"></video>
+            </video>
+            <%- include('./comments/tags.ejs') %>
+            <h3>run forest run</h3>
+            <div class="play-video-info">
+                <p>10000 views · 16 ago</p>
+                <div>
+                    <a href=""><img src="https://iconape.com/wp-content/png_logo_vector/like.png" alt="">100</a>
+                    <a href=""><img src="https://icons.veryicon.com/png/o/miscellaneous/flowerplus-icon-library/dislike-29.png" alt="">2</a>
+                    <a href=""><img src="https://static-00.iconduck.com/assets.00/share-icon-2048x1911-60w04qpe.png" alt="">Share</a>
+                    <a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/free-save-3244517-2701888.png?f=webp" alt="">Save</a>
+                </div>
+            </div>
+            <hr>
+            <%- include('./users/plubisher.ejs') %>
+            <%- include('./comments/newcom.ejs') %>
+            <%- include('./comments/oldcom.ejs') %>
+        </div>
+        <div class="blockk"></div>
+        <%- include('./partials/side-video-list.ejs') %>
+    </div>
+    <%- include('./partials/sidebar.ejs') %>
+</body>
+</html>
